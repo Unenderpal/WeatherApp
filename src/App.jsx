@@ -38,7 +38,7 @@ function App() {
       <div className='flex  gap-3 '>
         <input className='px-1 py-1 rounded-lg ' placeholder='enter city' type="text" value={value} onChange={(e) => setvalue(e.target.value)} />
 
-        <button className='border border-e-violet-100 px-1 py-1 rounded-lg  bg-gray-300' onClick={() => setCity(value)}>change city</button> </div>
+        <button className='border border-e-violet-100 px-1 py-1 rounded-lg  bg-gray-300' onClick={() => setCity(value)}>Enter</button> </div>
 
       {weatherdata && weatherdata?.cod < 400 && <> <div className='w-[300px] h-[300px] text-[30px] flex items-center justify-center flex-col gap-7 bg-green-300 px-1 py-1 rounded-lg '>
         {loading && <p className='text-[20px]'>Loading...</p>}
