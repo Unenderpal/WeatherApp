@@ -40,14 +40,16 @@ function App() {
 
         <button className='border border-e-violet-100 px-1 py-1 rounded-lg  bg-gray-300' onClick={() => setCity(value)}>Enter</button> </div>
 
-      {weatherdata && weatherdata?.cod < 400 && <> <div className='w-[300px] h-[300px] text-[30px] flex items-center justify-center flex-col gap-7 bg-green-300 px-1 py-1 rounded-lg '>
+       <div className='w-[300px] h-[300px] text-[30px] flex items-center justify-center flex-col gap-7 bg-[url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaQ_wd87QhUgrNPaPSjXUonj17m4Q49Q0ydg&s")] bg-green-300 px-1 py-1 rounded-lg '>
+      {weatherdata && weatherdata?.cod < 400 && <>
         {loading && <p className='text-[20px]'>Loading...</p>}
-        {weatherdata?.cod > 400 && <p className='text-[20px]'>City not found</p>}
+        {weatherdata?.cod >= 400 && <p className='text-[20px]'>City not found</p>}
         {name}
         <p > temp:{main?.temp}</p>
         <p > wind:{wind?.speed}</p>
         <p > humidity:{main?.humidity}</p>
-      </div>  </>}
+       </>}
+      </div> 
 
 
     </div>
